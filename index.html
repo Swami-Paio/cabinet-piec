@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabinet juridique Piec et associés - Conseil juridique Paris 7e</title>
+    <meta name="description" content="Cabinet juridique Piec & Associés. Conseil et contentieux pour particuliers et entreprises depuis 1998.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: bold;
+            color: #1a3a52;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #1a3a52, #2d5a80);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #d97e5c;
+        }
+
+        .btn-primary {
+            background: #d97e5c;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: background 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background: #c66845;
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #1a3a52;
+            padding: 0.75rem 1.5rem;
+            border: 2px solid #1a3a52;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background: #1a3a52;
+            color: white;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e8eef5 100%);
+            padding: 4rem 2rem;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5rem;
+            color: #1a3a52;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-text .subtitle {
+            color: #d97e5c;
+            font-style: italic;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-text p {
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-image {
+            background: linear-gradient(135deg, #d97e5c, #a85a3e);
+            height: 400px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        /* Section */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            color: #1a3a52;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-subtitle {
+            color: #d97e5c;
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Associés */
+        .associates {
+            background: white;
+        }
+
+        .associates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .associate-card {
+            text-align: center;
+        }
+
+        .associate-photo {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, #d0d5dd, #a0a5ad);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .associate-card h3 {
+            color: #1a3a52;
+            margin-bottom: 0.5rem;
+        }
+
+        .associate-card p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Expertises */
+        .expertises {
+            background: #f8f9fa;
+        }
+
+        .expertises-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .expertise-item h3 {
+            color: #d97e5c;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .expertise-item p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .expertise-number {
+            color: #d97e5c;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Cabinet */
+        .cabinet {
+            background: white;
+        }
+
+        .cabinet-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .cabinet-image {
+            background: linear-gradient(135deg, #d97e5c, #a85a3e);
+            height: 350px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.1rem;
+        }
+
+        .cabinet-text p {
+            margin-bottom: 1rem;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .cabinet-quote {
+            border-left: 4px solid #d97e5c;
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: #1a3a52;
+        }
+
+        /* Contact */
+        .contact {
+            background: #f8f9fa;
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info h3 {
+            color: #1a3a52;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-info-item {
+            margin-bottom: 2rem;
+        }
+
+        .contact-info-item strong {
+            display: block;
+            color: #1a3a52;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-info-item p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .contact-form h3 {
+            color: #1a3a52;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #1a3a52;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #d97e5c;
+            box-shadow: 0 0 0 3px rgba(217, 126, 92, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .required::after {
+            content: ' *';
+            color: #d97e5c;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a3a52;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-col p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .footer-col a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .footer-col a:hover {
+            opacity: 1;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 2rem;
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+                width: 100%;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .hero-image {
+                height: 300px;
+            }
+
+            .cabinet-content,
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .cabinet-image {
+                height: 250px;
+            }
+
+            section {
+                padding: 2rem 1rem;
+            }
+
+            .hero {
+                padding: 2rem 1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">
+                <div class="logo-icon">⚖</div>
+                <span>Cabinet Piec & Associés</span>
+            </a>
+            <nav>
+                <a href="#accueil">Accueil</a>
+                <a href="#expertises">Expertises</a>
+                <a href="#cabinet">Le cabinet</a>
+                <a href="#contact">Contact</a>
+                <a href="#contact" class="btn-primary">Prendre rendez-vous</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="accueil">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p style="color: #d97e5c; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; margin-bottom: 1rem;">Cabinet juridique — Paris 7e</p>
+                <h1>Le droit, <span class="subtitle">pratiqué avec exigence.</span></h1>
+                <p>Depuis 1998, le cabinet Piec & Associés conseille et défend particuliers et entreprises, avec une conviction simple : chaque dossier mérite une stratégie sur mesure.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn-primary">Prendre rendez-vous</a>
+                    <a href="#cabinet" class="btn-secondary">Découvrir le cabinet</a>
+                </div>
+            </div>
+            <div class="hero-image">📚 Bibliothèque juridique</div>
+        </div>
+    </section>
+
+    <!-- Associés -->
+    <section class="associates" id="associes">
+        <h2>Nos associés</h2>
+        <p class="section-subtitle">Trois associés, <em>un interlocuteur unique.</em></p>
+        <div class="associates-grid">
+            <div class="associate-card">
+                <div class="associate-photo">👩‍⚖️</div>
+                <h3>Hélène Piec</h3>
+                <p><strong>Associée fondatrice</strong><br>Droit des affaires & fiscal</p>
+            </div>
+            <div class="associate-card">
+                <div class="associate-photo">👨‍⚖️</div>
+                <h3>Thomas Verdier</h3>
+                <p><strong>Associé</strong><br>Droit immobilier & pénal</p>
+            </div>
+            <div class="associate-card">
+                <div class="associate-photo">👩‍⚖️</div>
+                <h3>Camille Roche</h3>
+                <p><strong>Associée</strong><br>Droit de la famille & du travail</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertises -->
+    <section class="expertises" id="expertises">
+        <h2>Nos expertises</h2>
+        <p class="section-subtitle">Six domaines, <em>une même exigence.</em></p>
+        <div class="expertises-grid">
+            <div class="expertise-item">
+                <div class="expertise-number">01</div>
+                <h3>Droit des affaires</h3>
+                <p>Constitution, gouvernance, contrats commerciaux et accompagnement des dirigeants à chaque étape de la vie de l'entreprise.</p>
+            </div>
+            <div class="expertise-item">
+                <div class="expertise-number">02</div>
+                <h3>Droit immobilier</h3>
+                <p>Transactions, baux, copropriété et contentieux de la construction, pour les particuliers comme pour les investisseurs.</p>
+            </div>
+            <div class="expertise-item">
+                <div class="expertise-number">03</div>
+                <h3>Droit de la famille</h3>
+                <p>Divorce, filiation, patrimoine familial et successions — une approche humaine dans les moments décisifs.</p>
+            </div>
+            <div class="expertise-item">
+                <div class="expertise-number">04</div>
+                <h3>Droit du travail</h3>
+                <p>Conseil et défense des employeurs et des salariés : contrats, ruptures, prud'hommes et restructurations.</p>
+            </div>
+            <div class="expertise-item">
+                <div class="expertise-number">05</div>
+                <h3>Droit pénal</h3>
+                <p>Défense pénale générale et droit pénal des affaires, de la garde à vue à l'audience correctionnelle.</p>
+            </div>
+            <div class="expertise-item">
+                <div class="expertise-number">06</div>
+                <h3>Droit fiscal</h3>
+                <p>Optimisation, contrôle et contentieux fiscal, en lien étroit avec vos experts-comptables.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cabinet -->
+    <section class="cabinet" id="cabinet">
+        <h2>Le cabinet</h2>
+        <p class="section-subtitle">Une structure à taille humaine, <em>des dossiers suivis de près.</em></p>
+        <div class="cabinet-content">
+            <div class="cabinet-text">
+                <p>Fondé en 1998 par Hélène Piec, le cabinet a choisi de rester une structure indépendante : chaque client échange directement avec l'associé qui porte son dossier, du premier rendez-vous à la dernière audience.</p>
+                <p>Nous privilégions la clarté — sur la stratégie, les délais et les honoraires — et la négociation chaque fois qu'elle sert mieux vos intérêts que le procès.</p>
+                <div class="cabinet-quote">
+                    « La rigueur n'exclut pas l'écoute — elle la suppose. »<br>
+                    <strong>H. Piec, associée fondatrice</strong>
+                </div>
+            </div>
+            <div class="cabinet-image">🏢 Bureau du cabinet</div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="text-align: center; background: white;">
+        <p style="color: #d97e5c; font-style: italic; margin-bottom: 1rem;">Premier rendez-vous d'écoute, sans engagement.</p>
+        <h2 style="margin-bottom: 2rem;">Parlons de votre situation.</h2>
+        <a href="#contact" class="btn-primary">Contactez-nous</a>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <h2>Contact</h2>
+        <p class="section-subtitle">Exposez-nous votre situation, <em>nous répondons sous 24 h.</em></p>
+
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <div class="contact-info-item">
+                    <strong>📍 Adresse</strong>
+                    <p>3 rue Louis Jessu Dit Ti Ting<br>97490 Saint-Denis</p>
+                </div>
+                <div class="contact-info-item">
+                    <strong>SIRET</strong>
+                    <p>418 195 582 00014</p>
+                </div>
+                <div class="contact-info-item">
+                    <strong>📞 Téléphone</strong>
+                    <p><a href="tel:+33145550114" style="color: #d97e5c;">01 45 55 01 14</a></p>
+                </div>
+                <div class="contact-info-item">
+                    <strong>📧 Email</strong>
+                    <p><a href="mailto:contact@piec-associes.fr" style="color: #d97e5c;">contact@piec-associes.fr</a></p>
+                </div>
+                <div class="contact-info-item">
+                    <strong>⏰ Horaires</strong>
+                    <p>Lundi — Vendredi : 9 h — 19 h<br>Samedi : sur rendez-vous</p>
+                </div>
+            </div>
+
+            <form class="contact-form" action="https://formspree.io/f/[FORMSPREE_ID_PLACEHOLDER]" method="POST">
+                <h3>Envoyer un message</h3>
+
+                <div class="form-group">
+                    <label for="name" class="required">Nom complet</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="required">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Téléphone</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Objet</label>
+                    <input type="text" id="subject" name="subject" placeholder="Ex. : litige immobilier">
+                </div>
+
+                <div class="form-group">
+                    <label for="message" class="required">Message</label>
+                    <textarea id="message" name="message" required placeholder="Décrivez brièvement votre situation et vos attentes."></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary" style="width: 100%; padding: 1rem;">Envoyer le message</button>
+
+                <p style="font-size: 0.85rem; color: #999; margin-top: 1rem;">Vos données sont utilisées uniquement pour traiter votre demande et ne sont jamais transmises à des tiers.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>Cabinet Piec & Associés</h4>
+                <p>Cabinet juridique indépendant. Conseil et contentieux, au service des particuliers et entreprises depuis 1998.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <p><a href="#accueil">Accueil</a></p>
+                <p><a href="#expertises">Expertises</a></p>
+                <p><a href="#cabinet">Le cabinet</a></p>
+                <p><a href="#contact">Contact</a></p>
+            </div>
+            <div class="footer-col">
+                <h4>Coordonnées</h4>
+                <p>3 rue Louis Jessu Dit Ti Ting<br>97490 Saint-Denis</p>
+                <p><a href="tel:+33145550114">01 45 55 01 14</a></p>
+                <p><a href="mailto:contact@piec-associes.fr">contact@piec-associes.fr</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Cabinet juridique Piec & Associés. Tous droits réservés.<br>
+            <small>Réalisé par <a href="https://upteamium.net" style="color: #d97e5c;">Upteamium</a></small></p>
+        </div>
+    </footer>
+</body>
+</html>
